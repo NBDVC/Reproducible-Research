@@ -41,13 +41,13 @@ for(n in unique(activity$date)){
 hist(histVector, breaks=10)
 ```
 
-![plot of chunk unnamed-chunk-2](./Assignment_1_files/figure-html/unnamed-chunk-21.png) 
+![plot of chunk unnamed-chunk-2](./PA1_template_files/figure-html/unnamed-chunk-21.png) 
 
 ```r
 plot(histVector)
 ```
 
-![plot of chunk unnamed-chunk-2](./Assignment_1_files/figure-html/unnamed-chunk-22.png) 
+![plot of chunk unnamed-chunk-2](./PA1_template_files/figure-html/unnamed-chunk-22.png) 
 
 ```r
 summary(histVector)
@@ -77,7 +77,7 @@ names(histVector)<-unique(activity$interval)
 plot(names(histVector),histVector, type="l")
 ```
 
-![plot of chunk unnamed-chunk-3](./Assignment_1_files/figure-html/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](./PA1_template_files/figure-html/unnamed-chunk-3.png) 
 
 ```r
 MaxOp<-max(histVector, na.rm=TRUE)
@@ -136,7 +136,7 @@ for(n in unique(factivity$date)){
 hist(histVectorf, breaks=10)
 ```
 
-![plot of chunk unnamed-chunk-4](./Assignment_1_files/figure-html/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](./PA1_template_files/figure-html/unnamed-chunk-4.png) 
 
 ```r
 summary(histVectorf)
@@ -188,4 +188,4 @@ plot(names(WkdayStepv),WkdayStepv, type="l", xlab="", ylab="Average", main="Week
 plot(names(wkendStepv),wkendStepv, type="l",  ylab="Average",xlab="Interval" )
 ```
 
-![plot of chunk unnamed-chunk-5](./Assignment_1_files/figure-html/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](./PA1_template_files/figure-html/unnamed-chunk-5.png) 
