@@ -1,9 +1,6 @@
----
-title: "Reproducible Research Peer 1"
-author: "Greg Clayson"
-date: "Sunday, August 17, 2014"
-output: html_document
----
+# Reproducible Research Peer 1
+Greg Clayson  
+Sunday, August 17, 2014  
 Show any code that is needed to
 
     Load the data (i.e. read.csv())
@@ -21,7 +18,7 @@ getwd()
 ```
 
 ```
-## [1] "C:/Users/Greg/Documents"
+## [1] "C:/Users/Greg/Documents/R/Coursera/Reproducible Research"
 ```
 What is mean total number of steps taken per day?
 
@@ -44,13 +41,13 @@ for(n in unique(activity$date)){
 hist(histVector, breaks=10)
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-21.png) 
+![plot of chunk unnamed-chunk-2](./Assignment_1_files/figure-html/unnamed-chunk-21.png) 
 
 ```r
 plot(histVector)
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-22.png) 
+![plot of chunk unnamed-chunk-2](./Assignment_1_files/figure-html/unnamed-chunk-22.png) 
 
 ```r
 summary(histVector)
@@ -80,7 +77,7 @@ names(histVector)<-unique(activity$interval)
 plot(names(histVector),histVector, type="l")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](./Assignment_1_files/figure-html/unnamed-chunk-3.png) 
 
 ```r
 MaxOp<-max(histVector, na.rm=TRUE)
@@ -139,7 +136,7 @@ for(n in unique(factivity$date)){
 hist(histVectorf, breaks=10)
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](./Assignment_1_files/figure-html/unnamed-chunk-4.png) 
 
 ```r
 summary(histVectorf)
@@ -152,7 +149,7 @@ summary(histVectorf)
 
 For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.  
 
-1. Create a new factor variable in the dataset with two levels – "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.  
+1. Create a new factor variable in the dataset with two levels  "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.  
 
 1. Make a panel plot containing a time series plot (i.e. type = "l" ) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
 
@@ -185,10 +182,10 @@ for(n in unique(wkendStep$interval)){
   
 }
 
-par(mfrow=c(1,2)) 
-plot(names(WkdayStepv),WkdayStepv, type="l", xlab="Interval", ylab="")
+par(mfrow=c(2,1)) 
+plot(names(WkdayStepv),WkdayStepv, type="l", xlab="", ylab="Average", main="WeekDay (top) Weekend (bottom")
 
-plot(names(wkendStepv),wkendStepv, type="l",  ylab="Average",xlab="" )
+plot(names(wkendStepv),wkendStepv, type="l",  ylab="Average",xlab="Interval" )
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](./Assignment_1_files/figure-html/unnamed-chunk-5.png) 

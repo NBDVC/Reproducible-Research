@@ -115,7 +115,7 @@ For this part the weekdays() function may be of some help here. Use the dataset 
 
 1. Make a panel plot containing a time series plot (i.e. type = "l" ) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
 
-```{r}
+```{r, fig.height=9}
 fillNA$wkdys<-weekdays(as.Date(fillNA$date))
 
 day<-c()
@@ -143,9 +143,9 @@ for(n in unique(wkendStep$interval)){
   
 }
 
-par(mfrow=c(1,2)) 
-plot(names(WkdayStepv),WkdayStepv, type="l", xlab="Interval", ylab="")
+par(mfrow=c(2,1)) 
+plot(names(WkdayStepv),WkdayStepv, type="l", xlab="", ylab="Average", main="WeekDay (top) Weekend (bottom")
 
-plot(names(wkendStepv),wkendStepv, type="l",  ylab="Average",xlab="" )
+plot(names(wkendStepv),wkendStepv, type="l",  ylab="Average",xlab="Interval" )
 
 ```
